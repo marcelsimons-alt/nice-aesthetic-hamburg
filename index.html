@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Nice Aesthetic Hamburg — Hamburg</title>
-<meta name="description" content="Ihr exklusives Kosmetik- und Beauty-Studio in Hamburg für professionelle Gesichtsbehandlungen, Wimpern, Augenbrauen und mehr.">
+<meta name="description" content="Willkommen bei Nice Aesthetic Hamburg, Ihr Rückzugsort für luxuriöse Schönheit und Wellness, erleben Sie exquisite Kosmetik und entspannende Treatments ➤ Termin buchen! ☎️">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -130,6 +130,54 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding
 .d1{transition-delay:.1s}.d2{transition-delay:.25s}.d3{transition-delay:.4s}
 
 /* RESPONSIVE */
+
+/* TEAM GRID */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;max-width:1100px;margin:0 auto;text-align:center}
+.team-card{transition:transform .3s}
+.team-card:hover{transform:translateY(-4px)}
+.team-img{width:180px;height:180px;border-radius:50%;overflow:hidden;margin:0 auto 16px;border:3px solid var(--accent-light)}
+.team-img img{width:100%;height:100%;object-fit:cover}
+.team-card h3{font-family:var(--serif);font-size:1.15rem;margin-bottom:4px}
+.team-card p{font-size:.85rem;color:var(--accent);font-weight:500}
+
+/* SOCIAL LINKS */
+.footer-social{display:flex;gap:16px;align-items:center}
+.footer-social a{color:var(--text-muted);transition:color .3s,transform .3s}
+.footer-social a:hover{color:var(--accent);transform:scale(1.15)}
+
+/* PREMIUM EFFECTS — inspired by 21st.dev */
+/* Gradient text accent */
+.hero h1 em{background:linear-gradient(135deg,var(--accent),var(--accent-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* Staggered reveal with clip-path */
+@keyframes slideUp{from{opacity:0;transform:translateY(40px);filter:blur(4px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+.hero-content>*{animation:slideUp .8s ease both}
+.hero-content>*:nth-child(1){animation-delay:.1s}
+.hero-content>*:nth-child(2){animation-delay:.3s}
+.hero-content>*:nth-child(3){animation-delay:.5s}
+.hero-content>*:nth-child(4){animation-delay:.7s}
+.hero-content>*:nth-child(5){animation-delay:.9s}
+/* Subtle gradient mesh on light sections */
+.section-light{background:linear-gradient(135deg,var(--light) 0%,var(--accent-light) 50%,var(--light) 100%);background-size:200% 200%;animation:gradientShift 15s ease infinite}
+@keyframes gradientShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+/* Glass card effect for contact items */
+.contact-item{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+/* Smooth image hover zoom for gallery */
+.gal-item{transition:transform .4s ease}
+.gal-item:hover{transform:scale(1.02);z-index:2}
+/* Nav blur enhancement */
+.nav{backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);background:rgba(15,25,35,.2)}
+.nav.scrolled{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+/* Button glow effect */
+.btn-primary{position:relative;overflow:hidden}
+.btn-primary::after{content:'';position:absolute;inset:-2px;background:linear-gradient(135deg,var(--accent),transparent,var(--accent));opacity:0;transition:opacity .4s;border-radius:inherit;z-index:-1}
+.btn-primary:hover::after{opacity:.4}
+/* Parallax enhanced */
+.parallax{background-attachment:fixed;transition:opacity .3s}
+
+/* Opening hours */
+.hours-list{columns:2;gap:24px;margin-top:12px}
+.hours-item{font-size:.85rem;color:var(--text-muted);margin-bottom:4px;break-inside:avoid}
+
 @media(max-width:768px){
   .nav{padding:16px 24px}
   .nav.scrolled{padding:12px 24px}
@@ -143,6 +191,9 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding
   .gal-grid{grid-template-columns:repeat(2,1fr)}
   .contact-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr;gap:32px}
+  .team-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+  .team-img{width:140px;height:140px}
+  .hours-list{columns:1}
   .trust-bar{flex-direction:column;gap:16px;padding:20px 24px}
   .hero-btns{flex-direction:column}
   .btn-primary,.btn-secondary{text-align:center}
@@ -153,7 +204,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding
 
 <!-- NAV -->
 <nav class="nav" id="nav">
-  <div class="nav-logo">Nice Aesthetic Hamburg</div>
+  <div class="nav-logo"><img src="https://framerusercontent.com/images/r4Lv22R1Iq6CwRADjYREuyGvfY4.png?scale-down-to=512" alt="Nice Aesthetic Hamburg"></div>
   <div class="nav-links">
     <a href="#leistungen">Leistungen</a>
     <a href="#ueber">Über uns</a>
@@ -166,13 +217,13 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80&fit=crop" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80&fit=crop" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><source src="https://videos.pexels.com/video-files/9218235/9218235-hd_1920_1080_30fps.mp4" type="video/mp4"></video>
+    <img src="https://framerusercontent.com/assets/r4Lv22R1Iq6CwRADjYREuyGvfY4.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><video autoplay muted loop playsinline poster="https://framerusercontent.com/assets/r4Lv22R1Iq6CwRADjYREuyGvfY4.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><source src="https://videos.pexels.com/video-files/9218235/9218235-hd_1920_1080_30fps.mp4" type="video/mp4"></video>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge"><span class="dot"></span>Beauty · Hamburg</div>
-    <h1>Nice Aesthetic Hamburg</h1>
-    <p class="hero-sub">Ihr exklusives Kosmetik- und Beauty-Studio in Hamburg für professionelle Gesichtsbehandlungen, Wimpern, Augenbrauen und mehr.</p>
+    <h1>NICE AESTHETIC HAMBURG</h1>
+    <p class="hero-sub">Willkommen bei Nice Aesthetic Hamburg, Ihr Rückzugsort für luxuriöse Schönheit und Wellness, erleben Sie exquisite Kosmetik und entspannende Treatments ➤ Termin buchen! ☎️</p>
     <div class="hero-btns">
       <a href="tel:04087602030" class="btn-primary">Termin anfragen →</a>
       <a href="tel:04087602030" class="btn-secondary">📞 Jetzt anrufen</a>
@@ -221,7 +272,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding
     <div class="about-text">
       <div class="section-label rv">Über uns</div>
       <h2 class="section-title rv d1">Lernen Sie <em>uns</em> kennen</h2>
-      <p class="rv d2">Willkommen bei Nice Aesthetic Hamburg — Ihrem exklusiven Rückzugsort für Schönheit und Wohlbefinden in Hamburg. In unserem Salon erwarten Sie erlesene Behandlungen, die speziell auf Ihre individuellen Bedürfnisse abgestimmt werden. Mit modernsten Technologien und hochwertigen Produkten sorgen wir für sichtbare Ergebnisse und ein strahlendes Erscheinungsbild.</p>
+      <p class="rv d2">[object Object]</p>
       <a href="#kontakt" class="btn-primary rv d3" style="display:inline-block;margin-top:12px">Termin anfragen →</a>
     </div>
   </div>
@@ -245,51 +296,127 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding
         <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1920&q=80&fit=crop')"></div>
         <div class="svc-overlay"></div>
         <div class="svc-content">
-          <h3>Gesichtsbehandlungen</h3>
-          <p>Maßgeschneiderte Treatments für strahlende Haut und jugendliches Aussehen.</p>
+          <h3>DAUERHAFT GLATT</h3>
+          
         </div>
       </div>
       <div class="svc-card rv d2">
         <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1920&q=80&fit=crop')"></div>
         <div class="svc-overlay"></div>
         <div class="svc-content">
-          <h3>Wimpernverlängerung</h3>
-          <p>Natürliche oder glamouröse Wimpern — individuell für Ihren perfekten Augenaufschlag.</p>
+          <h3>LASH- &amp; BROWLIFTING</h3>
+          
         </div>
       </div>
       <div class="svc-card rv d3">
         <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=1920&q=80&fit=crop')"></div>
         <div class="svc-overlay"></div>
         <div class="svc-content">
-          <h3>Augenbrauen-Styling</h3>
-          <p>Professionelles Brow-Design für einen ausdrucksstarken Blick.</p>
+          <h3>NEUKUNDE</h3>
+          
         </div>
       </div>
       <div class="svc-card rv d1">
         <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=1920&q=80&fit=crop')"></div>
         <div class="svc-overlay"></div>
         <div class="svc-content">
-          <h3>Microneedling</h3>
-          <p>Innovative Hautverfeinerung für ebenmäßige, glatte Haut.</p>
+          <h3>HYDRAFACIAL</h3>
+          
         </div>
       </div>
       <div class="svc-card rv d2">
         <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1920&q=80&fit=crop')"></div>
         <div class="svc-overlay"></div>
         <div class="svc-content">
-          <h3>Hydrafacial</h3>
-          <p>Tiefenwirksame Reinigung und Pflege für sofort sichtbare Ergebnisse.</p>
+          <h3>GESICHTS-BEHANDLUNGEN</h3>
+          
         </div>
       </div>
       <div class="svc-card rv d3">
         <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=1920&q=80&fit=crop')"></div>
         <div class="svc-overlay"></div>
         <div class="svc-content">
-          <h3>Sugaring</h3>
-          <p>Sanfte und hautschonende Haarentfernung mit natürlichen Zutaten.</p>
+          <h3>Hautanalyse Hamburg</h3>
+          
+        </div>
+      </div>
+      <div class="svc-card rv d1">
+        <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1920&q=80&fit=crop')"></div>
+        <div class="svc-overlay"></div>
+        <div class="svc-content">
+          <h3>Hydrafacial Hamburg</h3>
+          
+        </div>
+      </div>
+      <div class="svc-card rv d2">
+        <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1920&q=80&fit=crop')"></div>
+        <div class="svc-overlay"></div>
+        <div class="svc-content">
+          <h3>Microneedling Hamburg</h3>
+          
+        </div>
+      </div>
+      <div class="svc-card rv d3">
+        <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=1920&q=80&fit=crop')"></div>
+        <div class="svc-overlay"></div>
+        <div class="svc-content">
+          <h3>Peeling Hamburg</h3>
+          
+        </div>
+      </div>
+      <div class="svc-card rv d1">
+        <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=1920&q=80&fit=crop')"></div>
+        <div class="svc-overlay"></div>
+        <div class="svc-content">
+          <h3>Ultradermabrasion Hamburg</h3>
+          
+        </div>
+      </div>
+      <div class="svc-card rv d2">
+        <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1920&q=80&fit=crop')"></div>
+        <div class="svc-overlay"></div>
+        <div class="svc-content">
+          <h3>Maria Galland Hamburg</h3>
+          
+        </div>
+      </div>
+      <div class="svc-card rv d3">
+        <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=1920&q=80&fit=crop')"></div>
+        <div class="svc-overlay"></div>
+        <div class="svc-content">
+          <h3>FAQ</h3>
+          
+        </div>
+      </div>
+      <div class="svc-card rv d1">
+        <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1920&q=80&fit=crop')"></div>
+        <div class="svc-overlay"></div>
+        <div class="svc-content">
+          <h3>Wie buche ich einen Termin?</h3>
+          
+        </div>
+      </div>
+      <div class="svc-card rv d2">
+        <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1920&q=80&fit=crop')"></div>
+        <div class="svc-overlay"></div>
+        <div class="svc-content">
+          <h3>Welche Markenprodukte verwenden Sie?</h3>
+          
+        </div>
+      </div>
+      <div class="svc-card rv d3">
+        <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=1920&q=80&fit=crop')"></div>
+        <div class="svc-overlay"></div>
+        <div class="svc-content">
+          <h3>Benötige ich einen Termin für meine Behandlung?</h3>
+          
         </div>
       </div></div>
 </section>
+
+
+<!-- TEAM -->
+
 
 <!-- GALLERY -->
 
@@ -298,7 +425,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding
     <div class="section-label rv">Eindrücke</div>
     <h2 class="section-title rv d1">Galerie</h2>
   </div>
-  <div class="gal-grid"><div class="gal-item rv d1"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&amp;q=80&amp;fit=crop" alt="Nice Aesthetic Hamburg Galerie" loading="lazy"></div><div class="gal-item rv d2"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1920&amp;q=80&amp;fit=crop" alt="Nice Aesthetic Hamburg Galerie" loading="lazy"></div><div class="gal-item rv d3"><img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1920&amp;q=80&amp;fit=crop" alt="Nice Aesthetic Hamburg Galerie" loading="lazy"></div><div class="gal-item rv d1"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1920&amp;q=80&amp;fit=crop" alt="Nice Aesthetic Hamburg Galerie" loading="lazy"></div><div class="gal-item rv d2"><img src="https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=1920&amp;q=80&amp;fit=crop" alt="Nice Aesthetic Hamburg Galerie" loading="lazy"></div><div class="gal-item rv d3"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1920&amp;q=80&amp;fit=crop" alt="Nice Aesthetic Hamburg Galerie" loading="lazy"></div></div>
+  <div class="gal-grid"><div class="gal-item rv d1"><img src="https://framerusercontent.com/images/JvAARynk32syyou3tdLQSPkI7TA.png?width=444&amp;height=446" alt="Nice Aesthetic Hamburg Galerie" loading="lazy"></div><div class="gal-item rv d2"><img src="https://framerusercontent.com/images/bHboXhWbLcwgPe9kGpXltGE9Bs.jpg?scale-down-to=2048&amp;width=6000&amp;height=9000" alt="Nice Aesthetic Hamburg Galerie" loading="lazy"></div><div class="gal-item rv d3"><img src="https://framerusercontent.com/images/3fqjnVei8TkPKcJAmOz59BpieVc.jpg?width=500&amp;height=888" alt="Nice Aesthetic Hamburg Galerie" loading="lazy"></div><div class="gal-item rv d1"><img src="https://framerusercontent.com/images/ON0i9bXLJKdUUDHUmyO2CedBrI.jpg?scale-down-to=1024&amp;width=3861&amp;height=2574" alt="Nice Aesthetic Hamburg Galerie" loading="lazy"></div><div class="gal-item rv d2"><img src="https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=1920&amp;q=80&amp;fit=crop" alt="Nice Aesthetic Hamburg Galerie" loading="lazy"></div><div class="gal-item rv d3"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1920&amp;q=80&amp;fit=crop" alt="Nice Aesthetic Hamburg Galerie" loading="lazy"></div></div>
 </section>
 
 <!-- CONTACT -->
@@ -312,7 +439,20 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding
     <div class="contact-info">
       <a href="tel:04087602030" class="contact-item rv d1"><div class="contact-icon">📞</div><div><div class="contact-label">Telefon</div><div class="contact-value">040 / 87 60 20 30</div></div></a>
       <a href="mailto:info@niceaesthetic.de" class="contact-item rv d2"><div class="contact-icon">✉️</div><div><div class="contact-label">E-Mail</div><div class="contact-value">info@niceaesthetic.de</div></div></a>
-      <div class="contact-item rv d3"><div class="contact-icon">📍</div><div><div class="contact-label">Adresse</div><div class="contact-value">Bramfelder Chaussee 251, 22177 Hamburg</div></div></div>
+      <div class="contact-item rv d3"><div class="contact-icon">📍</div><div><div class="contact-label">Adresse</div><div class="contact-value">Bramfelder Chaussee 292, 22177 Hamburg Email</div></div></div>
+      <div class="contact-item rv d3"><div class="contact-icon">🕐</div><div><div class="contact-label">Öffnungszeiten</div><div class="hours-list"><div class="hours-item">sage
+
+Rechtliche Links
+
+Impressum
+
+Datenschutz
+
+AGB
+
+Öffnungszeiten
+
+Mo. - Fr.: 9:30 - 20:00</div></div></div></div>
     </div>
     <div class="contact-cta rv d2">
       <h3>Jetzt <em>Termin</em> anfragen</h3>
@@ -346,7 +486,15 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding
   </div>
   <div class="footer-bottom">
     <span>© 2026 Nice Aesthetic Hamburg. Alle Rechte vorbehalten.</span>
-    <span style="font-style:italic;font-family:var(--serif)">Crafted with precision</span>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/niceaesthetic_hamburg/?igsh=eWF5Z2diMm1vMDJv#" target="_blank" rel="noopener" title="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/justbeautyhamburg#" target="_blank" rel="noopener" title="Facebook">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      
+    </div>
   </div>
 </footer>
 
