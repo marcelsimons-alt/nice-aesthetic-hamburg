@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Nice Aesthetic Hamburg — Hamburg</title>
-<meta name="description" content="Ihr Rückzugsort für luxuriöse Schönheit und Wellness in Hamburg.">
+<meta name="description" content="Ihr exklusives Kosmetik- und Beauty-Studio in Hamburg für professionelle Gesichtsbehandlungen, Wimpern, Augenbrauen und mehr.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.35/build/spline-viewer.js"></script>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -50,9 +50,6 @@ a{text-decoration:none;color:inherit}
 .btn-secondary:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4)}
 .hero-rating{margin-top:48px;display:flex;align-items:center;gap:12px}
 
-/* Spline 3D accent */
-.hero-spline{position:absolute;right:-5%;top:10%;width:50%;height:80%;opacity:.3;pointer-events:none;z-index:1}
-.hero-spline spline-viewer{width:100%;height:100%}
 
 /* TRUST BAR */
 .trust-bar{background:var(--dark2);padding:24px 60px;display:flex;align-items:center;justify-content:center;gap:40px;border-top:1px solid rgba(255,255,255,.06)}
@@ -138,7 +135,6 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding
   .nav.scrolled{padding:12px 24px}
   .nav-links a:not(.nav-cta){display:none}
   .hero-content{padding:120px 24px 60px}
-  .hero-spline{display:none}
   .section{padding:80px 24px}
   .about-grid{grid-template-columns:1fr;gap:40px}
   .usp-grid{grid-template-columns:1fr;gap:32px}
@@ -170,14 +166,13 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg">
-    <video autoplay muted loop playsinline><source src="https://videos.pexels.com/video-files/9218235/9218235-hd_1920_1080_30fps.mp4" type="video/mp4"></video>
+    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80&fit=crop" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80&fit=crop" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><source src="https://videos.pexels.com/video-files/9218235/9218235-hd_1920_1080_30fps.mp4" type="video/mp4"></video>
   </div>
   <div class="hero-overlay"></div>
-  <div class="hero-spline"><spline-viewer url="https://prod.spline.design/mBHQUXal67h5rjXm/scene.splinecode" loading="lazy"></spline-viewer></div>
   <div class="hero-content">
     <div class="hero-badge"><span class="dot"></span>Beauty · Hamburg</div>
     <h1>Nice Aesthetic Hamburg</h1>
-    <p class="hero-sub">Ihr Rückzugsort für luxuriöse Schönheit und Wellness in Hamburg.</p>
+    <p class="hero-sub">Ihr exklusives Kosmetik- und Beauty-Studio in Hamburg für professionelle Gesichtsbehandlungen, Wimpern, Augenbrauen und mehr.</p>
     <div class="hero-btns">
       <a href="tel:04087602030" class="btn-primary">Termin anfragen →</a>
       <a href="tel:04087602030" class="btn-secondary">📞 Jetzt anrufen</a>
@@ -226,7 +221,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding
     <div class="about-text">
       <div class="section-label rv">Über uns</div>
       <h2 class="section-title rv d1">Lernen Sie <em>uns</em> kennen</h2>
-      <p class="rv d2">Willkommen bei Nice Aesthetic Hamburg — Ihrem exklusiven Rückzugsort für luxuriöse Schönheit und Wellness. In unserem Salon erwarten Sie erlesene Behandlungen in den Bereichen Kosmetik, Wellness und Beauty, die speziell für anspruchsvolle Kunden kreiert wurden. Mit modernsten Technologien und hochwertigen Produkten sorgen wir dafür, dass Sie sich von Kopf bis Fuß verwöhnt fühlen.</p>
+      <p class="rv d2">Willkommen bei Nice Aesthetic Hamburg — Ihrem exklusiven Rückzugsort für Schönheit und Wohlbefinden in Hamburg. In unserem Salon erwarten Sie erlesene Behandlungen, die speziell auf Ihre individuellen Bedürfnisse abgestimmt werden. Mit modernsten Technologien und hochwertigen Produkten sorgen wir für sichtbare Ergebnisse und ein strahlendes Erscheinungsbild.</p>
       <a href="#kontakt" class="btn-primary rv d3" style="display:inline-block;margin-top:12px">Termin anfragen →</a>
     </div>
   </div>
@@ -250,24 +245,24 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding
         <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1920&q=80&fit=crop')"></div>
         <div class="svc-overlay"></div>
         <div class="svc-content">
-          <h3>Hydrafacial</h3>
-          <p>Tiefenreinigung und Hydratisierung für strahlende Haut.</p>
+          <h3>Gesichtsbehandlungen</h3>
+          <p>Maßgeschneiderte Treatments für strahlende Haut und jugendliches Aussehen.</p>
         </div>
       </div>
       <div class="svc-card rv d2">
         <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1920&q=80&fit=crop')"></div>
         <div class="svc-overlay"></div>
         <div class="svc-content">
-          <h3>Dauerhaft Glatt</h3>
-          <p>Professionelle dauerhafte Haarentfernung mit modernster Lasertechnologie.</p>
+          <h3>Wimpernverlängerung</h3>
+          <p>Natürliche oder glamouröse Wimpern — individuell für Ihren perfekten Augenaufschlag.</p>
         </div>
       </div>
       <div class="svc-card rv d3">
         <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=1920&q=80&fit=crop')"></div>
         <div class="svc-overlay"></div>
         <div class="svc-content">
-          <h3>Lash- &amp; Browlifting</h3>
-          <p>Natürlich geschwungene Wimpern und perfekt geformte Augenbrauen.</p>
+          <h3>Augenbrauen-Styling</h3>
+          <p>Professionelles Brow-Design für einen ausdrucksstarken Blick.</p>
         </div>
       </div>
       <div class="svc-card rv d1">
@@ -275,15 +270,23 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding
         <div class="svc-overlay"></div>
         <div class="svc-content">
           <h3>Microneedling</h3>
-          <p>Hautverfeinerung und Kollagenboost für ein jüngeres Hautbild.</p>
+          <p>Innovative Hautverfeinerung für ebenmäßige, glatte Haut.</p>
         </div>
       </div>
       <div class="svc-card rv d2">
         <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1920&q=80&fit=crop')"></div>
         <div class="svc-overlay"></div>
         <div class="svc-content">
-          <h3>Neukunde</h3>
-          <p>Individuelle Erstberatung und Hautanalyse für neue Kunden.</p>
+          <h3>Hydrafacial</h3>
+          <p>Tiefenwirksame Reinigung und Pflege für sofort sichtbare Ergebnisse.</p>
+        </div>
+      </div>
+      <div class="svc-card rv d3">
+        <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=1920&q=80&fit=crop')"></div>
+        <div class="svc-overlay"></div>
+        <div class="svc-content">
+          <h3>Sugaring</h3>
+          <p>Sanfte und hautschonende Haarentfernung mit natürlichen Zutaten.</p>
         </div>
       </div></div>
 </section>
@@ -309,7 +312,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding
     <div class="contact-info">
       <a href="tel:04087602030" class="contact-item rv d1"><div class="contact-icon">📞</div><div><div class="contact-label">Telefon</div><div class="contact-value">040 / 87 60 20 30</div></div></a>
       <a href="mailto:info@niceaesthetic.de" class="contact-item rv d2"><div class="contact-icon">✉️</div><div><div class="contact-label">E-Mail</div><div class="contact-value">info@niceaesthetic.de</div></div></a>
-      <div class="contact-item rv d3"><div class="contact-icon">📍</div><div><div class="contact-label">Adresse</div><div class="contact-value">Bramfelder Chaussee 292, 22177 Hamburg</div></div></div>
+      <div class="contact-item rv d3"><div class="contact-icon">📍</div><div><div class="contact-label">Adresse</div><div class="contact-value">Bramfelder Chaussee 251, 22177 Hamburg</div></div></div>
     </div>
     <div class="contact-cta rv d2">
       <h3>Jetzt <em>Termin</em> anfragen</h3>
